@@ -1,7 +1,14 @@
 ﻿namespace DataTypes;
 
 class Program
+
 {
+    //constants as fields are immutable and cannot change throughout the program
+    const double pi = 3.14159265;
+    const int weeks = 52;
+    const int months = 12;
+    const string birthday = "February";
+
     static void Main(string[] args)
     {   //declare multiple values at once
         int num3, num4, num5;
@@ -120,6 +127,44 @@ class Program
         Console.WriteLine("Parsed Float: " + floatString + "Parsed Int: " + intString);
         Console.Read();
 
+        //String Manipulation:
+
+        int myAge = 34;
+        string myFirstName = "Jaclyn";
+        string myJob = "Developer";
+
+        //1. String Concatenation:
+        Console.WriteLine("Hello my name is " + myFirstName + " and I am " + myAge + " years old.");
+        //2. String Formatting: Uses the Index
+        Console.WriteLine("Hello my name is {0}, and I am {1} years old. I am a {2}.", myFirstName, myAge, myJob);
+        //3. String Interpolation:
+        Console.WriteLine($"Hello my name is {myFirstName} and I am {myAge} years old.");
+        //4. Verbatim Strings: Use @ and tells compiler to take string literally ignoring spacing & escape characters like /n
+        //useful for paths on your machine liek C:\Users\Admin 
+        Console.WriteLine(@"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum.");
+
+
+        //String Methods:
+        //SubString(int32) - used to get the substring from the string starting from the specified index;
+        //ToLower() - To Lowercase
+        //ToUpper() - To Uppercase
+        //Trim() - trim whitespace
+        //indexOf(string) - get first occurrence of of the string
+        //IsNullOrWhiteSpace()
+
+        //String.Format: Used to insert the object or variable name inside any string
+        //We can replace the value in the specified format
+        //var nameExample = "Chris";
+        //String.Format("My name is {0}", nameExample);
+
+        //Var Keyword:implicitly typed local variables
+        var varNumber = 0;
+        var text = "text";
+        var isTrue = true;
         Console.ReadKey();//blocks program from stopping or finishing
     }
 
