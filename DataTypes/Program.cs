@@ -71,11 +71,57 @@ class Program
         Console.Write("Enter a string and press Enter: ");
         int asciiValue = Console.Read();
         Console.WriteLine("ASCII Value is {0}", asciiValue);
-        Console.ReadKey();//blocks program from stopping or finishing
+       
 
         //variable and method args are camel case and classes and methods are pascal case
         //use Nouns for classes and Verbs for methods
 
+        //Explicit Conversion:
+        double myDouble = 13.37;
+        int myInt;
+        //cast double to int
+        myInt = (int)myDouble;
+        Console.WriteLine(myInt);
+        Console.Read();
+
+        //Implicit Conversion:
+        int anyNum = 3456789;
+        int bigNum = anyNum;
+
+        float myFloat = 13.57f;
+        double myNewDouble = myFloat;
+
+        //Type Conversion:
+        string myString = myDouble.ToString(); //"13.37"
+  
+        string myFloatString = myFloat.ToString();
+        Console.WriteLine(myFloatString);
+        Console.Read();
+
+        bool sunIsShining = true;
+        string boolString = sunIsShining.ToString();
+        Console.WriteLine(boolString);
+        Console.Read();
+
+        //Parse string into an int
+        string myNumString = "12";
+        string mySecondString = "22";
+        int myNumInt = Int32.Parse(myNumString);
+        int myNumSecondString = Int32.Parse(mySecondString);
+        int intResult = myNumInt + myNumSecondString;
+        string result = myNumString + mySecondString;
+        Console.WriteLine(intResult);
+        Console.Read();
+
+        string stringForFloat = "0.85"; // datatype should be float
+        string stringForInt = "12345"; // datatype should be int
+        float floatString = float.Parse(stringForFloat);
+        int intString = Int32.Parse(stringForInt);
+        Console.WriteLine("Parsed Float: " + floatString + "Parsed Int: " + intString);
+        Console.Read();
+
+        Console.ReadKey();//blocks program from stopping or finishing
     }
+
 }
 
