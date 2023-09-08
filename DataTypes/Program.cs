@@ -165,6 +165,69 @@ class Program
         var varNumber = 0;
         var text = "text";
         var isTrue = true;
+
+
+        //Challenge 1: String and its Methods
+        string yourName;
+        Console.Write("Please Enter your name and press Enter");
+        yourName = Console.ReadLine();
+        string yourNameUppercase = String.Format("UpperCase: {0}", yourName.ToUpper());
+        string yourNameLowercase = String.Format("LowerCase: {0}", yourName.ToLower());
+        string yourNameTrimmed = String.Format("Trimmed: {0}", yourName.Trim());
+        string yourNameSubstring = String.Format("Substring: {0}", yourName.Substring(0));
+        Console.WriteLine(yourNameUppercase);
+        Console.WriteLine(yourNameLowercase);
+        Console.WriteLine(yourNameTrimmed);
+        Console.WriteLine(yourNameSubstring);
+
+
+        //Challenge 2: String and its Methods II
+        Console.Write("Enter a string here:");
+        //read first input string
+        string input = Console.ReadLine();
+        Console.Write("Enter a character to search:");
+        //read the character input to search
+        char searchInput = Console.ReadLine()[0];
+        //get the index of the character from the string
+        int searchIndex = input.IndexOf(searchInput);
+        //prints the index as a search result on the console
+        Console.WriteLine("Index of character {0} in string is {1}", searchInput, searchIndex);
+
+        Console.Write("Enter your first name:");
+        string first = Console.ReadLine();
+
+        Console.Write("Enter your last name:");
+        string last = Console.ReadLine();
+
+        string fullName = String.Concat(first, " ", last);
+        Console.WriteLine("Your full name is: {0}", fullName);
+
+        //Challenge 3: DataTypes and Variables
+        byte myByte = 25;
+        Console.WriteLine(myByte);
+        sbyte mySbyte = -10;
+        Console.WriteLine(mySbyte);
+        int theNum = 20;
+        Console.WriteLine(theNum);
+        uint myUint = 123091;
+        Console.WriteLine(myUint);
+        short myShort = -32768;
+        Console.WriteLine(myShort);
+        float theFloat = -31.12378f;
+        Console.WriteLine(theFloat);
+        double theDouble = 12.1231250;
+        Console.WriteLine(theDouble);
+        char myChar = 'A';
+        Console.WriteLine(myChar);
+        bool myBool = true;
+        Console.WriteLine(myBool);
+        string myText = "I control text";
+        Console.WriteLine(myText);
+        string numText = "15";
+
+        int myNumFromText = Int32.Parse(numText);
+        Console.WriteLine(myNumFromText);
+
         Console.ReadKey();//blocks program from stopping or finishing
     }
 
